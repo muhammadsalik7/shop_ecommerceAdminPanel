@@ -1,0 +1,136 @@
+.ds-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 28px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.ds-stat-card {
+  background: #ffffff;
+  border: 1px solid #f0f1f5;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(20, 20, 43, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ds-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(20, 20, 43, 0.08);
+}
+
+.ds-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.ds-stat-label {
+  font-size: 13px;
+  color: #858da0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.ds-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.ds-stat-card:hover .ds-stat-icon {
+  transform: scale(1.06);
+}
+
+.ds-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1d29;
+  margin-bottom: 10px;
+  letter-spacing: -0.6px;
+}
+
+.ds-stat-change {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ds-stat-change.up {
+  color: #27ae60;
+}
+
+.ds-stat-change.down {
+  color: #e65b55;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 1024px) {
+  .ds-stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ds-stats {
+    gap: 14px;
+    padding: 0 16px;
+  }
+
+  .ds-stat-card {
+    padding: 18px;
+  }
+
+  .ds-stat-value {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .ds-stat-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .ds-stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .ds-stat-label {
+    font-size: 12px;
+  }
+
+  .ds-stat-value {
+    font-size: 21px;
+  }
+
+  .ds-stat-change {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 350px) {
+  .ds-stats {
+    grid-template-columns: 1fr;
+  }
+}
